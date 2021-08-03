@@ -1,0 +1,163 @@
+main #banner {
+  position: relative;
+} 
+main #banner img {
+  width: 100vw;
+}
+main #banner h2 {
+  position: absolute;
+  left: 50%;
+    bottom: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 30%;
+  max-height: 50%;
+  color: #fff;
+  font-size: 3vw;
+  text-shadow: 0 5px 10px #000;
+}
+
+main #products-container {
+  background-image: url("https://i.pinimg.com/736x/8e/66/bd/8e66bd836566ed1dd259308538ddbb02.jpg");
+}
+
+main #products-container h2 {
+  text-align: center;
+  color:#fff;
+}
+
+main #products-container hr {
+  width: 100%;
+  /* width: calc(100vw - ((var(--site-ident)+30px) * 2)); */
+    height: 1px;
+  margin: 0 30px;
+  background-color: #fff;
+}
+
+main #descript-store {
+  font-size: 18px;
+  box-shadow: none;
+}
+main #descript-store h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+main #descript-store h2 span {
+  color: var(--primary);
+}
+
+main #form-container {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  padding: 0;
+}
+
+main #form-container #text-aside-form {
+  width: 50%;
+  padding: 30px;
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+  position: relative;
+}
+main #form-container #text-aside-form>h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 23px;
+}
+main #form-container #text-aside-form>p {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  display: flex;
+    justify-content: space-evenly;
+}
+main #form-container #text-aside-form .social-icons {
+  font-size: 30px;
+  color: var(--primary-contrast);
+}
+
+
+main #form-container>form {
+  display: flex;
+    flex-direction: column;
+    gap: 15px;
+  margin: 30px;
+}
+main #form-container>form>label {
+  position: relative;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+main #form-container>form>label>input, main #form-container>form>label>textarea {
+  border: none;
+  background: transparent;
+  width: 300px;
+}
+main #form-container>form>label>textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+main #form-container>form *:focus-visible { outline: none }
+main #form-container>form>label>input:focus ~ span,
+main #form-container>form>label>input:valid ~ span,
+main #form-container>form>label>textarea:focus ~ span,
+main #form-container>form>label>textarea:valid ~ span {
+  top: 0;
+  transform: translateY(-50%);
+}
+main #form-container>form>label>span {
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  margin-left: -90%;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #525252;
+  cursor: text;
+}
+main #form-container>form>button {
+  padding: 20px;
+  background-image: linear-gradient(60deg, #fff, var(--primary));
+  width: 50%;
+  align-self: flex-end;
+  border-radius: 4px;
+}
+
+@media(max-width: 700px) {
+  main #carousel h2 {
+    width: 70%;
+    top: 0;
+    font-size: 20px;
+    text-shadow: 0 1px 3px #000;
+  }
+
+  main #products-container { background-size: 100% }
+
+  main #descript-store {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media(min-width: 1064px) {
+  main #form-container #text-aside-form>p:last-child {
+    bottom: 30px;
+      left: 0;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@media (max-width: 1063px) {
+  main #form-container { flex-direction: column }
+  main #form-container #text-aside-form { width: 100% }
+  main #form-container>form { width: calc(90% - 30px) }
+  main #form-container>form>label { display: flex; flex: 1 }
+  main #form-container>form>label>input, main #form-container>form>label>textarea { flex: 1 }
+  main #form-container>form>label>span { margin-left: 10% }
+}

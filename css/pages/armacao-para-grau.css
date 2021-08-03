@@ -1,0 +1,9 @@
+main #banner img {
+  width: 100vw;
+}
+
+main #products-container {
+  /* background: url("https://images-na.ssl-images-amazon.com/images/I/81b8LJaJTbL._AC_SL1500_.jpg"); */
+  background: linear-gradient(-36deg, #5379ff, #9ec5ff);
+    background-size: 100%;
+}

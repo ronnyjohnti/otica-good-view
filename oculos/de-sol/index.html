@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Good View - Os óculos mais bonitos para você</title>
+
+    <script src="https://kit.fontawesome.com/7721be08b8.js" crossorigin="anonymous"></script>
+
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pages/de-sol.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/"><img src="/assets/img/logo.webp"></a></li>
+          <li><label for="check-menu">|||</label></li>
+        </ul>
+      </nav>
+      <input type="checkbox" id="check-menu" style="display:none">
+      <div id="menu">
+        <ul>
+          <li><a href="/oculos/de-sol/">Óculos de Sol</a></li>
+          <li><a href="/oculos/armacao-para-grau/">Armação Para Grau</a></li>
+          <li><a href="/oculos/infantil/">Óculos Infantil</a></li>
+        </ul>
+      </div>
+      <label id="auth-button" for="show-auth-form">
+        Entrar / Cadastrar
+      </label>
+    </header>
+
+    <main>
+      <div id="banner">
+        <img src="/assets/img/de-sol/banner-4.webp" alt="Banner Óculos de Sol">
+      </div>
+
+      <div class="container" id="products-container">
+        <div><i class="fas fa-spinner"></i></div>
+      </div>
+
+      <input type="checkbox" id="show-auth-form" class="no-display">
+      <label class="black-overlay" for="show-auth-form"></label>
+
+      <div id="auth-form-container">
+        <input type="radio" name="form-selection" id="login-form-check" class="no-display" checked>
+        <input type="radio" name="form-selection" id="signup-form-check" class="no-display">
+
+        <span>
+          <label for="login-form-check">
+            <h3 login>Login</h3>
+          </label>
+          <label for="signup-form-check">
+            <h3 signup>Cadastro</h3>
+          </label>
+        </span>
+
+        <form action="https://ip.ifrn.edu.br/sirab/send.php" id="login-form">
+          <label>
+            <input name="email" type="email" required>
+            <span>E-mail:</span>
+          </label>
+          <label>
+            <input name="password" type="password" required>
+            <span>Senha:</span>
+          </label>
+          <button>Entrar</button>
+        </form>
+
+        <form action="https://ip.ifrn.edu.br/sirab/send.php" id="signup-form">
+          <label>
+            <input name="name" required>
+            <span>Nome completo:</span>
+          </label>
+          <label>
+            <input name="address" required>
+            <span>Endereço:</span>
+          </label>
+          <label>
+            <input name="zip-code-br" required>
+            <span>CEP:</span>
+          </label>
+          <label>
+            <input name="email" type="email" required>
+            <span>E-mail:</span>
+          </label>
+          <label>
+            <input name="password" type="password" required>
+            <span>Senha:</span>
+          </label>
+          <button>Cadastrar</button>
+        </form>
+
+        <label class="close-x" for="show-auth-form">X</label>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-column">
+        <h6>Sobre Nós</h6>
+        <p>Rua Fancisco Franca Cambraia 314, Centro, Senador Pompeu - CE<br>CEP: 63600-000</p>
+        <p>contato@good-view.com</p>
+        <p>(88) 99606-1604</p>
+        <p>Atendimento de Segunda à Sexta das 8:00 às 18:00</p>
+      </div>
+
+      <div class="footer-column">
+        <h6>Serviços ao Cliente</h6>
+        <p>Fale Conosco</p>
+        <p>Rastreie Seu Pedido</p>
+        <p>Frequentes (FAQ)</p>
+      </div>
+
+      <div class="footer-column">
+        <h6>Informações e Políticas</h6>
+        <p>Política de Envios e Prazos de Entrega</p>
+        <p>Políticas de Trocas, Devoluções e Reembolso</p>
+        <p>Políticas de Privacidade</p>
+      </div>
+
+      <img src="/assets/img/stamps.webp" id="footer-stamps">
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script>setTimeout(getProductsPerCategory("Sol"), 1000)</script>
+  </body>
+</html>

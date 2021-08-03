@@ -1,0 +1,307 @@
+/* Color and size variables */
+:root {
+  --primary: #d23;
+  --primary-contrast: #fff;
+  --primary-color-variation-1: #f00;
+  --primary-color-variation-2: #6a0000;
+  --primary-color-variation-3: #b50000;
+}
+@media (max-width: 400px) {
+  :root {
+    --site-ident: 20px;
+  }
+}
+@media (min-width: 401px) and (max-width: 700px) {
+  :root {
+    --site-ident: 50px;
+  }
+}
+@media (min-width: 701px) {
+  :root {
+    --site-ident: 150px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+table td {padding-right: 50px}
+
+/* HEADER */
+header {
+  position: relative;
+  display: flex;
+    align-items: center; 
+  height: 150px;
+  padding: 0 var(--site-ident);
+  background-image: linear-gradient(to left, var(--primary-color-variation-1), var(--primary-color-variation-2));
+  box-shadow: 0 0 5px var(--primary);
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  font-size: 30px;
+  width: 100%;
+}
+
+header nav li:last-child {
+  color: var(--primary-contrast);
+  transform: rotateZ(90deg) scaleX(1.5);
+  font-size: 40px;
+}
+
+header nav li a {
+  color: var(--primary-contrast);
+  
+}
+
+header nav li img {
+  height: 96px;
+  border-radius: 50%;
+}
+
+header [id="check-menu"]:checked ~ #menu { display: initial }
+
+header #menu {
+  position: absolute;
+  display: none;
+  padding: inherit;
+  top: 100%;
+  background-color: var(--primary-color-variation-3);
+  width: 100%;
+  left: 0;
+  z-index: 2;
+}
+
+header #menu ul {
+  display: flex;
+    justify-content: space-evenly;
+  font-size: 18px;
+  padding: 10px;
+}
+header #menu ul a {
+  color: var(--primary-contrast);
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+    justify-content: space-between;
+  padding: 30px var(--site-ident);
+  background-image: linear-gradient(to left, var(--primary-color-variation-1), var(--primary-color-variation-2));
+  color: #fff;
+}
+footer h6 {
+  font-size: 20px;
+}
+footer .footer-column {
+  width: 200px;
+}
+footer .footer-column p {
+  margin: 10px 0;
+}
+footer #footer-stamps {
+  width: 150px;
+}
+
+/* Classes */
+main .container {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  width: calc(100vw - (var(--site-ident) * 2));
+  margin: 30px var(--site-ident);
+  padding: 30px;
+  box-shadow: 0 0 10px #000;
+}
+main .container .product {
+  width: 250px;
+    height: 360px;
+  margin: 30px 0;
+  padding: 20px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  font-size: 16px;
+  background: #EFFFEF;
+  color: #000;
+}
+main .container .product img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+main .container .product button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+}
+
+#auth-button {
+  position: absolute;
+  padding: 0 10px 5px;
+  top: 0;
+    left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  color: var(--primary);
+  background: var(--primary-contrast);
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+}
+
+#auth-form-container {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 30px;
+}
+#auth-form-container>span {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+#auth-form-container>span h3 {
+  display: inline;
+  margin: 0 10px;
+  color: #600;
+  cursor: pointer;
+}
+#auth-form-container #login-form-check:checked ~ span h3[login],
+#auth-form-container #signup-form-check:checked ~ span h3[signup] {
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+#auth-form-container #login-form,
+#auth-form-container #signup-form {
+  display: none;
+}
+#auth-form-container #login-form-check:checked ~ #login-form,
+#auth-form-container #signup-form-check:checked ~ #signup-form {
+  display: initial;
+}
+
+#auth-form-container form label {
+  display: block;
+  position: relative;
+  background-color: var(--primary-contrast);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+#auth-form-container form label input { width: 100% }
+#auth-form-container form label input:focus { outline: none }
+#auth-form-container form label span {
+  position: absolute;
+  background-color: var(--primary-contrast);
+  transform: translateY(-50%);
+  top: 50%;
+  left: 10px;
+  margin: 0;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #525252;
+  cursor: text;
+}
+#auth-form-container form label input:focus ~ span,
+#auth-form-container form label input:valid ~ span {
+  top: 0;
+  transform: translateY(-50%);
+}
+
+#auth-form-container form button {
+  display: block;
+  background: var(--primary-contrast);
+  color: var(--primary);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 16px;
+    font-weight: bold;
+  cursor: pointer;
+}
+
+#show-auth-form:checked + .black-overlay {display: flex}
+#show-auth-form:checked ~ #auth-form-container {display: initial}
+
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+    height: 100vh;
+  background-color: #0007;
+  display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+    font-weight: bold;
+  color: var(--primary-contrast);
+  cursor: pointer;
+}
+
+.no-display { display: none }
+
+.fa-spinner {
+  animation-name: spinnerAnim;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  font-size: 60px;
+  color: var(--primary-contrast);
+}
+
+@media(max-width: 700px) {
+  header nav ul {
+    font-size: 15px;
+  }
+  header #menu ul {
+    flex-direction: column;
+      align-items: right;
+      gap: 10px;
+    float: right;
+  }
+  header #menu ul li { text-align: right }
+
+  footer {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  footer h6 {
+    font-size: 18px;
+  }
+  footer .footer-column {
+    width: 150px;
+  }
+}
+
+@keyframes spinnerAnim {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

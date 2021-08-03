@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Produtos</title>
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/pages/register.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/"><img src="/assets/img/logo.webp"></a></li>
+        <li><label for="check-menu">|||</label></li>
+      </ul>
+    </nav>
+    <input type="checkbox" id="check-menu" style="display:none">
+    <div id="menu">
+      <ul>
+        <li><a href="/oculos/de-sol/">Óculos de Sol</a></li>
+        <li><a href="/oculos/armacao-para-grau/">Armação Para Grau</a></li>
+        <li><a href="/oculos/infantil/">Óculos Infantil</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div id="add-product">
+      <input id="title" placeholder="Nome do produto:">
+      <select id="category">
+        <option value="" disabled selected>--- Categoria ---</option>
+      </select>
+      <input id="image" placeholder="URL da Imagem:">
+      <input id="price" type="number" placeholder="Preço: (Apenas números)">
+      <textarea id="description" placeholder="Descrição do produto:"></textarea>
+      <span style="text-align: center">
+        Destaque:
+        <label><input name="spotlight" type="radio" value=true>Sim</label>
+        <label><input name="spotlight" type="radio" value=false>Não</label>
+      </span>
+      <button id="add-product-button" onclick="addProduct()">Adicionar</button>
+    </div>
+  </main>
+
+  <div id="products-lists"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    getCategories()
+    getAllProductsPerCategory()
+  </script>
+</body>
+</html>

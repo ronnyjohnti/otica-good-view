@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Good View - Os óculos mais bonitos para você</title>
+
+    <script src="https://kit.fontawesome.com/7721be08b8.js" crossorigin="anonymous"></script>
+
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pages/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/"><img src="/assets/img/logo.webp"></a></li>
+          <li><label for="check-menu">|||</label></li>
+        </ul>
+      </nav>
+      <input type="checkbox" id="check-menu" style="display:none">
+      <div id="menu">
+        <ul>
+          <li><a href="/oculos/de-sol/">Óculos de Sol</a></li>
+          <li><a href="/oculos/armacao-para-grau/">Armação Para Grau</a></li>
+          <li><a href="/oculos/infantil/">Óculos Infantil</a></li>
+        </ul>
+      </div>
+      <label id="auth-button" for="show-auth-form">
+        Entrar / Cadastrar
+      </label>
+    </header>
+
+    <main>
+      <div id="banner">
+        <img src="/assets/img/index/banner-1.webp">
+        <h2>NOSSA PRIORIDADE É TE PROPORCIONAR UMA BOA VISÃO.</h2>
+      </div>
+      
+      <div class="container" id="products-container">
+        <h2>Nossos Destaques</h2>
+        <hr />
+
+        <div><i class="fas fa-spinner"></i></div>
+        <!-- Os produtos vão ser renderizados aqui por meio de JavaScript após ser feita uma consulta em uma "fake api" em JSON Server -->
+        
+      </div>
+
+      <div class="container" id="descript-store">
+        <h2>
+          Ótica <span>Good View</span>
+        </h2>
+        <p>
+          Nossa ótica foi inaugurada em dezembro de 2012, com o intuito de oferecer aos clientes e amigos mais opções em armações, lentes e tudo o que estiver relacionado ao universo da visão. Moderna, sofisticada e sempre de olho nas últimas tendências do mercado - Nós somos a ÓTICA GOOD VIEW! <br><br> Trabalhamos com diversas marcas em óculos de sol e armações. As nossas lentes para óculos são todas de alta tecnologia e qualidade. Atendemos também os usuários de lentes de contato. Nossa equipe está pronta para atender cada cliente com profissionalismo e competência, em sua particularidade.
+        </p>
+			</div>
+
+      <div class="container" id="form-container">
+        <div id="text-aside-form">
+          <h2>CONTATO</h2>
+          <p>Fale conosco através dos nossos canais de atendimento!</p>
+          <p>Se ainda está com dúvidas, precisa de um serviço específico ou já é nosso cliente e está tendo problemas com algum de nossos produtos, entre em contato!</p>
+          <p>Garantimos um ótimo atendimento.</p>
+          <p>
+            <a href="https://fb.com/oticaboavista" target="_blank">
+              <i class="fab fa-facebook social-icons"></i>
+            </a>
+            <a href="https://ig.com/oticaboavista" target="_blank">
+              <i class="fab fa-instagram social-icons"></i>
+            </a>
+            <a href="malito:contato@goo-dview.com" target="_blank">
+              <i class="fas fa-at social-icons"></i>
+            </a>
+          </p>
+        </div>
+        
+        <form action="https://ip.ifrn.edu.br/sirab/send.php" method="post">
+          <label>
+            <input type="text" name="name" required>
+            <span>Nome:</span>
+          </label>
+          <label>
+            <input type="text" name="contact" required>
+            <span>Contato:</span>
+          </label>
+          <label>
+            <textarea name="txt-message" required></textarea>
+            <span>Mensagem:</span>
+          </label>
+          <button>Enviar</button>
+        </form>
+      </div>
+
+      <input type="checkbox" id="show-auth-form" class="no-display">
+      <label class="black-overlay" for="show-auth-form"></label>
+
+      <div id="auth-form-container">
+        <input type="radio" name="form-selection" id="login-form-check" class="no-display" checked>
+        <input type="radio" name="form-selection" id="signup-form-check" class="no-display">
+
+        <span>
+          <label for="login-form-check">
+            <h3 login>Login</h3>
+          </label>
+          <label for="signup-form-check">
+            <h3 signup>Cadastro</h3>
+          </label>
+        </span>
+
+        <form action="https://ip.ifrn.edu.br/sirab/send.php" id="login-form">
+          <label>
+            <input name="email" type="email" required>
+            <span>E-mail:</span>
+          </label>
+          <label>
+            <input name="password" type="password" required>
+            <span>Senha:</span>
+          </label>
+          <button>Entrar</button>
+        </form>
+
+        <form action="https://ip.ifrn.edu.br/sirab/send.php" id="signup-form">
+          <label>
+            <input name="name" required>
+            <span>Nome completo:</span>
+          </label>
+          <label>
+            <input name="address" required>
+            <span>Endereço:</span>
+          </label>
+          <label>
+            <input name="zip-code-br" required>
+            <span>CEP:</span>
+          </label>
+          <label>
+            <input name="email" type="email" required>
+            <span>E-mail:</span>
+          </label>
+          <label>
+            <input name="password" type="password" required>
+            <span>Senha:</span>
+          </label>
+          <button>Cadastrar</button>
+        </form>
+
+        <label class="close-x" for="show-auth-form">X</label>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-column">
+        <h6>Sobre Nós</h6>
+        <p>Rua Fancisco Franca Cambraia 314, Centro, Senador Pompeu - CE<br>CEP: 63600-000</p>
+        <p>contato@good-view.com</p>
+        <p>(88) 99606-1604</p>
+        <p>Atendimento de Segunda à Sexta das 8:00 às 18:00</p>
+      </div>
+
+      <div class="footer-column">
+        <h6>Serviços ao Cliente</h6>
+        <p>Fale Conosco</p>
+        <p>Rastreie Seu Pedido</p>
+        <p>Frequentes (FAQ)</p>
+      </div>
+
+      <div class="footer-column">
+        <h6>Informações e Políticas</h6>
+        <p>Política de Envios e Prazos de Entrega</p>
+        <p>Políticas de Trocas, Devoluções e Reembolso</p>
+        <p>Políticas de Privacidade</p>
+      </div>
+
+      <img src="/assets/img/stamps.webp" id="footer-stamps">
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script>setTimeout(getSpotlightProducts(), 1000)</script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+main #banner img {
+  width: 100vw;
+}
+
+main #products-container {
+  background: url('https://ak.picdn.net/shutterstock/videos/1030039841/thumb/1.jpg?ip=x480');
+    background-size: 100%;
+}

@@ -1,0 +1,8 @@
+main #banner img {
+  width: 100vw;
+}
+
+main #products-container {
+  background-image: url("https://images.pond5.com/retro-style-infinite-tunnel-background-footage-105039539_prevstill.jpeg");
+  background-size: 100%;
+}
